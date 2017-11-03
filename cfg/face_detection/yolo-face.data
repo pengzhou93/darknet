@@ -1,0 +1,4 @@
+classes= 1
+train  = wider_face/wider_face/wider_face_image_list.txt
+names = cfg/face_detection/face.names
+backup = dataset/yolo/face_detection

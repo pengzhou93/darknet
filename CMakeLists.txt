@@ -113,9 +113,12 @@ set(SOURCE_FILES
         src/utils.c
         src/utils.h)
 
-include_directories(include src)
+include_directories(include)
 
-add_definitions(-DOPENCV)
+add_definitions(-DGPU)
+add_definitions(-DCUDNN -DOPENCV)
+
+add_executable(simple_example ${SOURCE_FILES})
 
 add_custom_target(mytest COMMAND make all -j32 -C ${PROJECT_SOURCE_DIR}
         CLION_EXE_DIR=${PROJECT_BINARY_DIR})

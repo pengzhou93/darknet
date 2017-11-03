@@ -433,6 +433,8 @@ void fill_truth_detection(char *path, int num_boxes, float *truth, int classes, 
         id = boxes[i].id;
 
         if ((w < .001 || h < .001)) continue;
+// fix wider face dataset problem
+        if (x > 999990) continue;
 
         truth[i*5+0] = x;
         truth[i*5+1] = y;
