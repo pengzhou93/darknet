@@ -1,3 +1,4 @@
+model/
 cmake-build*/
 *.so
 *.a
